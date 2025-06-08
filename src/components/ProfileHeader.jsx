@@ -1,6 +1,9 @@
 import { User, MapPin, LogOut, BadgeCheck } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const ProfileHeader = () => {
+  const navigate = useNavigate();
+
   const userInfo = {
     name: 'Secure',
     nip: '3123948392',
@@ -8,7 +11,8 @@ const ProfileHeader = () => {
   };
 
   const handleLogout = () => {
-    alert('Logged out!');
+    // Di sini bisa juga clear token / session kalau pakai auth
+    navigate('/');
   };
 
   return (
